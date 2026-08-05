@@ -9,30 +9,79 @@
     <meta name="author" content="Julius Conteh">
 
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Step 9: Float profile image */
+        main img {
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+
+        /* Step 10: Position heading on aside image */
+        aside {
+            position: relative;
+        }
+
+        aside h2 {
+            position: absolute;
+            top: 47px;
+            left: 150px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+        }
+
+        /* Optional: box styling for aside and temple list */
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="#"> Home</a>
+            <a href="#">Home</a>
             <a href="wwr/">Rafting Website</a>
+            <!-- Step 11: Add LinkedIn and Facebook links -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
         </nav>
     </header>
+
     <main>
         <h1>Julius Conteh | WDD 130</h1>
         <img src="images/profile.jpg" alt="Hello! my name is Julius Conteh" width="200">
-        <p> Hello! My name is Julius Conteh and I am a student at the university of Uttah. I am
-            majoring in software developmnet and I am passionate about web design and development. I
-            am currently working on a project called"Rafting Website" and I am excited to learn more
+        <p>
+            Hello! My name is Julius Conteh and I am a student at the University of Uttah. I am
+            majoring in software development and I am passionate about web design and development.
+            I am currently working on a project called "Rafting Website" and I am excited to learn
+            more
             about web development and design.
         </p>
+
+        <!-- Step 8: Temple list with class -->
+        <ul class="box">
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/philadelphia-pennsylvania-temple"
+                  target="_blank" rel="noopener">Philadelphia Pennsylvania Temple</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/paris-france-temple"
+                  target="_blank" rel="noopener">Paris France Temple</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/berlin-germany-temple"
+                  target="_blank" rel="noopener">Berlin Germany Temple</a></li>
+        </ul>
     </main>
-    <aside>
+
+    <!-- Step 7: Aside with class -->
+    <aside class="box">
         <h2>Abidjan</h2>
         <img src="images/abidjan-ivory-coast.jpeg" alt="abidjan-ivory-coast">
-        <p>"Abidjan is a city on the southern Atlantic coast of Ivory Coast, in West Africa. It is
-            the country's major urban center, with skyscrapers rising above the Ebrie Lagoon."</p>
+        <p>
+            "Abidjan is a city on the southern Atlantic coast of Ivory Coast, in West Africa. It is
+            the country's major urban center, with skyscrapers rising above the Ebrie Lagoon."
+        </p>
     </aside>
+
     <footer>
         <p>©2026 | Julius Conteh | Freetown, Sierra Leone</p>
     </footer>
