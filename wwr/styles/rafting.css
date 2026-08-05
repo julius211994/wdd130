@@ -59,16 +59,29 @@ nav a:hover {
 /* Hero Section */
 .hero {
     position: relative;
+    /* required for overlay positioning */
+}
+
+.hero article {
+    position: absolute;
+    /* overlays on top of hero image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .hero article img {
-    display: block;
-    width: 100%;
+    float: right;
+    /* required: image floats right of text */
+    max-width: 40%;
     height: auto;
+    margin: 10px;
 }
 
 .hero h1 {
     position: absolute;
+    /* overlays heading */
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -81,7 +94,8 @@ nav a:hover {
 }
 
 .hero article p {
-    position: right;
+    position: absolute;
+    /* overlays text box */
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
