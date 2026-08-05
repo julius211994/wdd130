@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julius Conteh | WDD 130</title>
+    <meta name="description" content="Julius Conteh's BYU-Idaho WDD 130 course home page">
+    <meta name="author" content="Julius Conteh">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Float profile image (Step 9) */
+        main img {
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+
+        /* Position heading on aside image (Step 10) */
+        aside {
+            position: relative;
+        }
+
+        aside h2 {
+            position: absolute;
+            top: 47px;
+            left: 150px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+        }
+
+        /* Box styling for aside and temple list (Steps 7 & 8) */
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* Hero section for rafting site (Step 3 wireframe) */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero h1 {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Logo placeholder -->
+        <img src="images/logo.png" alt="Rafting Site Logo" width="100">
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="wwr/">Rafting Website</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section (Step 3 wireframe) -->
+        <div class="hero">
+            <img src="images/rafting-hero.jpg" alt="Rafting Adventure">
+            <h1>Rafting Company</h1>
+            <article>
+                <p>Experience the thrill of rafting with us — where adventure meets nature!</p>
+            </article>
+        </div>
+
+        <h1>Julius Conteh | WDD 130</h1>
+        <img src="images/profile.jpg" alt="Hello! my name is Julius Conteh" width="200">
+        <p>
+            Hello! My name is Julius Conteh and I am a student at the University of Uttah. I am
+            majoring in software development and I am passionate about web design and development.
+            I am currently working on a project called "Rafting Website" and I am excited to learn
+            more
+            about web development and design.
+        </p>
+
+        <!-- Favorite Temples List (Step 8) -->
+        <ul class="box">
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/philadelphia-pennsylvania-temple"
+                  target="_blank" rel="noopener">Philadelphia Pennsylvania Temple</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/paris-france-temple"
+                  target="_blank" rel="noopener">Paris France Temple</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/berlin-germany-temple"
+                  target="_blank" rel="noopener">Berlin Germany Temple</a></li>
+        </ul>
+    </main>
+
+    <!-- Aside with class (Step 7) -->
+    <aside class="box">
+        <h2>Abidjan</h2>
+        <img src="images/abidjan-ivory-coast.jpeg" alt="abidjan-ivory-coast">
+        <p>
+            "Abidjan is a city on the southern Atlantic coast of Ivory Coast, in West Africa. It is
+            the country's major urban center, with skyscrapers rising above the Ebrie Lagoon."
+        </p>
+    </aside>
+
+    <footer>
+        <p>©2026 | Julius Conteh | Freetown, Sierra Leone</p>
+        <!-- Social media icons placeholder -->
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </footer>
+</body>
+
+</html>
