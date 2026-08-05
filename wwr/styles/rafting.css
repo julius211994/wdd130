@@ -1,3 +1,7 @@
+/* ================================
+   Rafting Site Stylesheet
+   ================================ */
+
 /* CSS Variables */
 :root {
     --primary-color: #055a05;
@@ -57,7 +61,7 @@ nav a:hover {
     position: relative;
 }
 
-.hero img {
+.hero article img {
     display: block;
     width: 100%;
     height: auto;
@@ -76,7 +80,7 @@ nav a:hover {
     text-align: center;
 }
 
-.hero article {
+.hero article p {
     position: right;
     bottom: 15%;
     left: 50%;
@@ -89,7 +93,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Box Styling */
+/* Section Boxes */
 .box {
     border: 1px solid #ccc;
     padding: 20px;
@@ -100,6 +104,11 @@ nav a:hover {
     border-radius: 5px;
 }
 
+.box h2 {
+    font-family: var(--heading-font);
+    margin-bottom: 10px;
+}
+
 /* Footer */
 footer {
     background-color: var(--accent1-color);
@@ -108,12 +117,13 @@ footer {
     padding: 1rem;
 }
 
-footer a {
-    color: var(--accent2-color);
-    text-decoration: none;
-    margin: 0 5px;
+/* Footer Social Media Nav */
+footer nav.socialmedia {
+    margin-top: 10px;
 }
 
-footer a:hover {
-    color: var(--secondary-color);
+footer nav.socialmedia a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
 }
