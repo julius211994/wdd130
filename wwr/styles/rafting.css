@@ -77,7 +77,7 @@ nav a:hover {
 }
 
 .hero article {
-    position: absolute;
+    position: right;
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
