@@ -1,9 +1,11 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CSS Variables */
 :root {
     --heading-background-color: #f06;
     --heading-text-color: #333;
@@ -12,60 +14,68 @@
     --border: 1px solid rgb(0 0 0 / 0.1);
 }
 
-/* Some example variable use in the declarations. */
+/* Headings */
 h1 {
     background-color: var(--heading-background-color);
     color: var(--heading-text-color);
     font-family: var(--heading-font);
     padding: var(--padding);
+    border-bottom: 1px solid #000;
+    /* bottom border */
 }
 
-aside {
-    margin: 10px auto;
-    padding: var(--padding);
-    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+/* Layout containers */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
 }
 
+/* Navigation bar */
 nav {
     background-color: darkblue;
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: white;
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-h1 {
-    color: darkblue;
+/* Grid wrapper for main + aside */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    /* main flexible, aside fixed */
+    gap: 1rem;
 }
 
-img {
+/* Main content */
+main {
+    margin: 1rem;
+}
+
+main img {
+    float: right;
     width: 150px;
     height: auto;
     border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    margin: 0 0 10px 10px;
 }
 
-p {
-    padding: 0;
-}
-
-main {
-    max-width: 840px;
-}
-
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray
-}
-
+/* Aside styling */
 aside {
+    position: relative;
     width: 20rem;
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.2);
@@ -73,6 +83,16 @@ aside {
     background-color: #eee;
     color: #333;
     text-align: center;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+}
+
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
 }
 
 aside img {
@@ -80,26 +100,25 @@ aside img {
     height: auto;
 }
 
+/* Paragraphs */
 p {
     padding: 0;
 }
 
+/* Footer */
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
 }
 
-/* Class Selectors */
+/* Utility class */
 .box {
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 1rem;
     background-color: #ddd;
     color: #000;
-}
-
-aside {
-    width: 20em;
-    text-align: center;
 }
