@@ -1,4 +1,4 @@
-/* Step 4: Define variables */
+/* CSS Variables */
 :root {
     --primary-color: #055a05;
     /* forest green */
@@ -12,14 +12,14 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Reset box model */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General body styles */
+/* Body */
 body {
     font-family: var(--body-font);
     line-height: 1.6;
@@ -27,7 +27,7 @@ body {
     background-color: #fff;
 }
 
-/* Header styling */
+/* Header */
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
@@ -52,33 +52,52 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
-    color: white;
 }
 
 .hero img {
+    display: block;
     width: 100%;
     height: auto;
 }
 
 .hero h1 {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
+    color: white;
+    padding: 15px 25px;
     font-family: var(--heading-font);
+    font-size: 2rem;
+    text-align: center;
 }
 
-/* Box styling */
+.hero article {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--accent1-color);
+    padding: 10px 20px;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Box Styling */
 .box {
     border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -87,4 +106,14 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+footer a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
 }
