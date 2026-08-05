@@ -123,6 +123,33 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+/* Adventures Section */
+.adventures {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.adventures figure {
+    flex: 1;
+    text-align: center;
+}
+
+.adventures img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.adventures figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--accent1-color);
+}
+
 /* Footer */
 footer {
     background-color: var(--accent1-color);
