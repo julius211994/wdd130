@@ -56,10 +56,13 @@ nav a {
     grid-template-columns: 1fr 20rem;
     /* main flexible, aside fixed */
     gap: 1rem;
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 /* Main content */
 main {
+    max-width: 840px;
     margin: 1rem;
 }
 
