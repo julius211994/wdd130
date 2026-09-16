@@ -12,7 +12,7 @@
     /* dark slate blue */
     --accent2-color: #e9c46a;
     /* golden yellow */
-    --heading-font: "Times New Roman", Georgia, serif;
+    --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -76,12 +76,14 @@ nav a:hover {
 
 .hero h1 {
     position: absolute;
-    top: 20%;
+    top: 20px;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 15px 25px;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
+    padding: 16px;
     font-family: var(--heading-font);
     font-size: 2rem;
     text-align: center;
@@ -102,7 +104,7 @@ nav a:hover {
 
 .hero article img {
     float: right;
-    max-width: 40%;
+    max-width: 125px;
     height: auto;
     margin: 0 0 10px 10px;
 }
