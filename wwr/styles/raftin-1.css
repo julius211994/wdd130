@@ -143,32 +143,32 @@ main {
 
 .history {
     border: 1px solid #999;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #ffffff;
 }
 
-.history h2,
-.adventures-section h2 {
+.history h2 {
     text-align: center;
     font-family: var(--heading-font);
-    margin-bottom: 1rem;
-    color: var(--accent1-color);
+    margin-bottom: 15px;
 }
 
 .history-content {
     display: grid;
     grid-template-columns: 1fr 180px 1fr;
-    gap: 1rem;
     align-items: center;
+    gap: 20px;
 }
 
 .history-content p {
-    padding: 0.5rem;
+    padding: 10px;
 }
 
 .history-content img {
-    width: 100%;
-    height: auto;
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
     display: block;
 }
 
