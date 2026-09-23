@@ -180,17 +180,21 @@ main {
     border: 1px solid #999;
     padding: 1rem;
     margin: 1rem 0;
-}
-
-.adventures {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
 }
 
+.adventures {
+    width: 100%;
+    text-align: center;
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+}
+
 .adventures figure {
-    flex: 1;
-    min-width: 0;
+    flex: 1 1 150px;
     text-align: center;
 }
 

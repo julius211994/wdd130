@@ -126,30 +126,40 @@ nav a:hover {
 }
 
 /* Adventures Section */
-.adventures {
+.adventures-section {
+    border: 1px solid #999;
+    padding: 1rem;
+    margin: 1rem 0;
+
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1rem;
-    margin-top: 1rem;
 }
 
-.adventures figure {
-    flex: 1;
+.adventures-section h2 {
+    width: 100%;
+    text-align: center;
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+}
+
+.adventures-section figure {
+    flex: 1 1 150px;
     text-align: center;
 }
 
-.adventures img {
+.adventures-section figure img {
+    display: block;
     width: 100%;
-    max-width: 150px;
     height: auto;
-    border-radius: 5px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
-.adventures figcaption {
+.adventures-section figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
-    color: var(--accent1-color);
 }
 
 /* Contact Form */
