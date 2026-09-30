@@ -1,0 +1,94 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Merriweather, Georgia, serif;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: navy;
+}
+
+/* Form container */
+form {
+    width: 650px;
+    margin: 0 auto;
+    background-color: #eee;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+/* Form items */
+.form-item {
+    display: grid;
+    gap: 0.5rem;
+}
+
+/* Labels and inputs */
+label {
+    font-weight: 500;
+}
+
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Code styling */
+code {
+    font-family: monospace;
+    background-color: #ddd;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+/* Button styling */
+button {
+    width: 10rem;
+    background-color: navy;
+    color: white;
+    border: none;
+    margin: 1rem auto;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+    padding-top: 0.5rem;
+}
