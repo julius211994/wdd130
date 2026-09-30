@@ -106,26 +106,40 @@ form button:hover {
 
 /* Employee Profiles */
 .employees {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 2rem auto;
     max-width: 1000px;
+    margin: 2rem auto;
 }
 
-.employees figure {
+.center-heading {
+    text-align: center;
+    /* centers heading */
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+}
+
+.employee-row {
+    display: flex;
+    /* ✅ horizontal layout */
+    justify-content: center;
+    /* center the group */
+    gap: 2rem;
+    /* spacing between photos */
+    flex-wrap: nowrap;
+    /* keep them in one row */
+}
+
+.employee-row figure {
     text-align: center;
 }
 
-.employees img {
+.employee-row img {
     width: 150px;
     height: auto;
     border-radius: 50%;
     border: 2px solid var(--accent1-color);
 }
 
-.employees figcaption {
+.employee-row figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
     color: var(--accent1-color);
@@ -134,9 +148,9 @@ form button:hover {
 /* Google Map iframe */
 iframe {
     border-radius: 5px;
-    margin-top: 1rem;
+    border: none;
     width: 100%;
-    height: 250px;
+    height: 300px;
 }
 
 /* Footer */
@@ -158,4 +172,15 @@ footer nav.socialmedia {
 footer nav.socialmedia a img {
     width: 30px;
     height: 30px;
+}
+
+.main-heading {
+    text-align: center;
+    /* centers the text */
+    font-family: var(--heading-font);
+    margin: 1rem 0;
+    /* spacing above and below */
+    font-size: 2rem;
+    /* make it stand out */
+    color: var(--accent1-color);
 }
