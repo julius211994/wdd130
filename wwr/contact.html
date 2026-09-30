@@ -12,8 +12,9 @@
 </head>
 
 <body>
+
     <header>
-        <img src="images/z-raftingcompas.jpg" alt="Rafting Site Logo" width="100">
+        <img src="images/z-raftingcompas.jpg" alt="White Water Rafting Company logo" width="100">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -23,80 +24,87 @@
     </header>
 
     <main>
-        <!-- Company Information -->
-        <section class="box">
-            <h2>Contact Information</h2>
-            <p>White Water Rafting Company<br>
-                123 Main River Street<br>
-                Kollo, California<br>
-                Phone: +1 999 999 9999<br>
-                Email: info@whitewater.com</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="250"
-              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </section>
+        <!-- Two-column layout -->
+        <section class="contact-grid">
+            <!-- Left column: Company Info -->
+            <div class="company-info box">
+                <h2>Company Information</h2>
+                <p>White Water Rafting Company</p>
+                <p>123 Main River Street</p>
+                <p>Koloa, California</p>
+                <p>Phone: +1 999 999 9999</p>
+                <p>Email: info@whitewater.com</p>
+                <iframe
+                  src="
+                  https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31569.239588321805!2d-13.218848396728513!3d8.48431077188009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssl!4v1790779253842!5m2!1sen!2ssl"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"></iframe>"
+            </div>
 
-        <!-- Contact Form -->
-        <section class="box">
-            <h2>Get in Touch</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
+            <!-- Right column: Contact Form -->
+            <div class="contact-form box">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <p>Purpose of Message:</p>
-                <label><input type="radio" name="purpose" value="general"> General
-                    Inquiry</label><br>
-                <label><input type="radio" name="purpose" value="reservation"> Reservation
-                    Question</label><br>
-                <label><input type="radio" name="purpose" value="suggestion"> Website
-                    Suggestion</label><br><br>
+                    <p>Purpose of Message:</p>
+                    <label><input type="radio" name="purpose" value="general"> General
+                        Inquiry</label>
+                    <label><input type="radio" name="purpose" value="reservation"> Reservation
+                        Question</label>
+                    <label><input type="radio" name="purpose" value="suggestion"> Website
+                        Suggestion</label>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
 
-                <label><input type="checkbox" name="newsletter"> Please subscribe me to the monthly
-                    newsletter</label><br><br>
+                    <label><input type="checkbox" name="newsletter"> Please subscribe me to the
+                        monthly newsletter</label>
 
-                <button type="submit">Send Message</button>
-            </form>
+                    <button type="submit">Get in Touch!</button>
+                </form>
+            </div>
         </section>
 
         <!-- Employee Profiles -->
-        <section class="box">
+        <section class="employees box">
             <h2>We Are Here to Serve You</h2>
-            <div class="employees">
-                <figure>
-                    <img src="images/employee1.jpg" alt="Guide 1">
-                    <figcaption>John Doe – Lead Guide</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee2.jpg" alt="Guide 2">
-                    <figcaption>Jane Smith – Safety Officer</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee3.jpg" alt="Guide 3">
-                    <figcaption>Mike Johnson – Adventure Planner</figcaption>
-                </figure>
-            </div>
+            <figure>
+                <img src="images/sarah.jpg" alt="Guide - Sarah">
+                <figcaption>Sarah – Lead Guide</figcaption>
+            </figure>
+            <figure>
+                <img src="images/david.jpg" alt="Guide - David">
+                <figcaption>David – Safety Coordinator</figcaption>
+            </figure>
+            <figure>
+                <img src="images/maria.jpg" alt="Guide - Maria">
+                <figcaption>Maria – Adventure Planner</figcaption>
+            </figure>
         </section>
     </main>
 
     <footer>
         <p>©2026 | White Water Rafting Company | Adventure Awaits</p>
         <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank" rel="noopener">
+            <a href="https://facebook.com/julius.conteh.562" target="_blank"
+              rel="noopener noreferrer">
                 <img src="images/facebook-icon.png" alt="Facebook">
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener">
+            <a href="https://linkedin.com/in/julius-conteh-005b872a8" target="_blank"
+              rel="noopener noreferrer">
                 <img src="images/linkedin-icon.png" alt="LinkedIn">
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/twitter-icon.png" alt="Twitter">
             </a>
         </nav>
     </footer>
+
 </body>
 
 </html>
