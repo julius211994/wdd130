@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--accent1-color);
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+header img {
+    max-height: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Box sections */
+.box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    border-radius: 5px;
+}
+
+/* Two-column contact grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--body-font);
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Employee Profiles */
+.employees {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.center-heading {
+    text-align: center;
+    /* centers heading */
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+}
+
+.employee-row {
+    display: flex;
+    /* ✅ horizontal layout */
+    justify-content: center;
+    /* center the group */
+    gap: 2rem;
+    /* spacing between photos */
+    flex-wrap: nowrap;
+    /* keep them in one row */
+}
+
+.employee-row figure {
+    text-align: center;
+}
+
+.employee-row img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--accent1-color);
+}
+
+.employee-row figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--accent1-color);
+}
+
+/* Google Map iframe */
+iframe {
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 300px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent1-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+footer nav.socialmedia {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+footer nav.socialmedia a img {
+    width: 30px;
+    height: 30px;
+}
+
+.main-heading {
+    text-align: center;
+    /* centers the text */
+    font-family: var(--heading-font);
+    margin: 1rem 0;
+    /* spacing above and below */
+    font-size: 2rem;
+    /* make it stand out */
+    color: var(--accent1-color);
+}

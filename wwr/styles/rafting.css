@@ -1,17 +1,35 @@
+/* =========================================================
+   WHITEWATER RAFTING WEBSITE
+   rafting.css
+   ========================================================= */
+
+/* =========================================================
+   COLOR AND FONT VARIABLES
+   ========================================================= */
+
 :root {
     --primary-color: #055a05;
     --secondary-color: #f4a261;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
+
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
+
+/* =========================================================
+   GENERAL RESET
+   ========================================================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* =========================================================
+   BODY
+   ========================================================= */
 
 body {
     font-family: var(--body-font);
@@ -20,11 +38,19 @@ body {
     background-color: #fff;
 }
 
-/* Header */
+img {
+    max-width: 100%;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
     padding: 1rem;
+
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -32,7 +58,12 @@ header {
 
 header img {
     max-height: 60px;
+    width: auto;
 }
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 nav {
     display: flex;
@@ -50,7 +81,10 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
-/* Box sections */
+/* =========================================================
+   GENERAL BOX SECTIONS
+   ========================================================= */
+
 .box {
     border: 1px solid #ccc;
     padding: 20px;
@@ -59,16 +93,192 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Two-column contact grid */
+/* =========================================================
+   HOME PAGE - HERO SECTION
+   ========================================================= */
+
+/*
+   The hero is positioned relative so that the
+   hero heading/message can be positioned absolutely
+   over the image.
+*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*
+   Text positioned over the hero image.
+   This satisfies the assignment requirement
+   for absolute positioning.
+*/
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    max-width: 700px;
+
+    text-align: center;
+
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    padding: 1.5rem;
+
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   HOME PAGE - CALL TO ACTION
+   ========================================================= */
+
+.cta {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta a {
+    display: inline-block;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    padding: 0.75rem 1.5rem;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 5px;
+}
+
+.cta a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+/* =========================================================
+   HOME PAGE - NEWSLETTER
+   ========================================================= */
+
+.newsletter {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    text-align: center;
+
+    background-color: #f5f5f5;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.newsletter h2 {
+    font-family: var(--heading-font);
+    margin-bottom: 0.75rem;
+}
+
+.newsletter p {
+    margin-bottom: 1rem;
+}
+
+/* =========================================================
+   HOME PAGE - CSS GRID
+   ========================================================= */
+
+/*
+   This grid provides the required multi-column
+   layout and prevents the page from becoming
+   a simple single-column flow.
+*/
+
+.home-grid {
+    max-width: 1100px;
+
+    margin: 2rem auto;
+
+    padding: 1rem;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2rem;
+}
+
+.home-grid article {
+    padding: 1rem;
+}
+
+.home-grid h2 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    margin-bottom: 0.75rem;
+}
+
+.home-grid p {
+    margin-bottom: 1rem;
+}
+
+/*
+   Image width is responsive while height remains
+   automatic so the original image aspect ratio
+   is preserved.
+*/
+
+.home-grid img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+}
+
+/* =========================================================
+   CONTACT PAGE - TWO COLUMN GRID
+   ========================================================= */
+
 .contact-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 2rem;
+
     max-width: 1000px;
+
     margin: 2rem auto;
 }
 
-/* Contact Form */
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
 form {
     display: flex;
     flex-direction: column;
@@ -83,8 +293,11 @@ form input,
 form textarea,
 form button {
     padding: 0.5rem;
+
     border: 1px solid #ccc;
+
     border-radius: 5px;
+
     font-family: var(--body-font);
 }
 
@@ -94,38 +307,47 @@ form textarea {
 
 form button {
     background-color: var(--primary-color);
+
     color: white;
+
     font-weight: bold;
+
     cursor: pointer;
+
     border: none;
 }
 
 form button:hover {
     background-color: var(--secondary-color);
+    color: var(--accent1-color);
 }
 
-/* Employee Profiles */
+/* =========================================================
+   EMPLOYEE PROFILES
+   ========================================================= */
+
 .employees {
     max-width: 1000px;
+
     margin: 2rem auto;
 }
 
 .center-heading {
     text-align: center;
-    /* centers heading */
+
     font-family: var(--heading-font);
+
     margin-bottom: 1rem;
 }
 
 .employee-row {
     display: flex;
-    /* ✅ horizontal layout */
+
     justify-content: center;
-    /* center the group */
+
     gap: 2rem;
-    /* spacing between photos */
+
     flex-wrap: nowrap;
-    /* keep them in one row */
 }
 
 .employee-row figure {
@@ -135,52 +357,370 @@ form button:hover {
 .employee-row img {
     width: 150px;
     height: auto;
+
     border-radius: 50%;
+
     border: 2px solid var(--accent1-color);
 }
 
 .employee-row figcaption {
     margin-top: 0.5rem;
+
     font-weight: bold;
+
     color: var(--accent1-color);
 }
 
-/* Google Map iframe */
+/* =========================================================
+   GOOGLE MAP
+   ========================================================= */
+
 iframe {
     border-radius: 5px;
+
     border: none;
+
     width: 100%;
+
     height: 300px;
 }
 
-/* Footer */
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 footer {
     background-color: var(--accent1-color);
+
     color: white;
+
     text-align: center;
+
     padding: 1rem;
+
     position: relative;
 }
 
+/* =========================================================
+   SOCIAL MEDIA
+   ========================================================= */
+
 footer nav.socialmedia {
     margin-top: 10px;
+
     display: flex;
+
     justify-content: flex-end;
+
     gap: 1rem;
 }
 
 footer nav.socialmedia a img {
     width: 30px;
-    height: 30px;
+    height: auto;
 }
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
 
 .main-heading {
     text-align: center;
-    /* centers the text */
+
     font-family: var(--heading-font);
+
     margin: 1rem 0;
-    /* spacing above and below */
+
     font-size: 2rem;
-    /* make it stand out */
+
     color: var(--accent1-color);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Header */
+
+    header {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    /* Navigation */
+
+    nav {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        margin-top: 1rem;
+    }
+
+    /* Hero */
+
+    .hero-content {
+        width: 90%;
+
+        padding: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    /* Home grid */
+
+    .home-grid {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+    /* Contact grid */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        padding: 1rem;
+    }
+
+    /* Employees */
+
+    .employee-row {
+        flex-wrap: wrap;
+    }
+
+    /* Newsletter */
+
+    .newsletter {
+        margin: 2rem 1rem;
+    }
+
+    /* CTA */
+
+    .cta {
+        padding: 0 1rem;
+    }
+}
+
+/* =========================================================
+   TRIPS PAGE
+   ========================================================= */
+
+.trips-intro {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.trips-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   TRIPS CALL TO ACTION
+   ========================================================= */
+
+.trip-cta {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    text-align: center;
+
+    background-color: var(--accent2-color);
+
+    border-radius: 8px;
+}
+
+.trip-cta h2 {
+    font-family: var(--heading-font);
+    margin-bottom: 0.75rem;
+}
+
+.trip-cta p {
+    margin-bottom: 1rem;
+}
+
+.trip-cta a {
+    display: inline-block;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    padding: 0.75rem 1.5rem;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 5px;
+}
+
+.trip-cta a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+/* =========================================================
+   TRIP CARDS GRID
+   ========================================================= */
+
+.trips-grid {
+    max-width: 1100px;
+
+    margin: 2rem auto;
+
+    padding: 1rem;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+/* =========================================================
+   INDIVIDUAL TRIP CARD
+   ========================================================= */
+
+.trip-card {
+    background-color: #f5f5f5;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.trip-card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.trip-content {
+    padding: 1.25rem;
+}
+
+.trip-content h2 {
+    font-family: var(--heading-font);
+
+    color: var(--accent1-color);
+
+    margin-bottom: 0.75rem;
+}
+
+.trip-content p {
+    margin-bottom: 0.75rem;
+}
+
+/* =========================================================
+   TRIP TABLE
+   ========================================================= */
+
+.trip-table-section {
+    max-width: 1100px;
+
+    margin: 3rem auto;
+
+    padding: 1rem;
+}
+
+.trip-table-section h2 {
+    font-family: var(--heading-font);
+
+    text-align: center;
+
+    margin-bottom: 0.75rem;
+}
+
+.trip-table-section > p {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 1.5rem;
+}
+
+/*
+   Allows the table to scroll horizontally on
+   smaller screens without breaking the page.
+*/
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+
+    padding: 0.9rem;
+
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+
+    color: white;
+
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tr:hover {
+    background-color: var(--accent2-color);
+}
+
+/* =========================================================
+   TRIPS PAGE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .trips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-cta {
+        margin: 2rem 1rem;
+    }
+
+    .trip-table-section {
+        margin: 2rem 1rem;
+    }
+
+    th,
+    td {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
 }
