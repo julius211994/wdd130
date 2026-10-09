@@ -1,10 +1,6 @@
 /* =========================================================
-   WHITEWATER RAFTING WEBSITE
+   WHITE WATER RAFTING WEBSITE
    rafting.css
-   ========================================================= */
-
-/* =========================================================
-   COLOR AND FONT VARIABLES
    ========================================================= */
 
 :root {
@@ -18,7 +14,7 @@
 }
 
 /* =========================================================
-   GENERAL RESET
+   GENERAL STYLES
    ========================================================= */
 
 * {
@@ -27,19 +23,11 @@
     box-sizing: border-box;
 }
 
-/* =========================================================
-   BODY
-   ========================================================= */
-
 body {
     font-family: var(--body-font);
     line-height: 1.6;
     color: var(--accent1-color);
     background-color: #fff;
-}
-
-img {
-    max-width: 100%;
 }
 
 /* =========================================================
@@ -58,12 +46,7 @@ header {
 
 header img {
     max-height: 60px;
-    width: auto;
 }
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
 
 nav {
     display: flex;
@@ -82,7 +65,7 @@ nav a:hover {
 }
 
 /* =========================================================
-   GENERAL BOX SECTIONS
+   GENERAL BOX
    ========================================================= */
 
 .box {
@@ -94,14 +77,8 @@ nav a:hover {
 }
 
 /* =========================================================
-   HOME PAGE - HERO SECTION
+   HERO SECTION
    ========================================================= */
-
-/*
-   The hero is positioned relative so that the
-   hero heading/message can be positioned absolutely
-   over the image.
-*/
 
 .hero {
     position: relative;
@@ -115,30 +92,21 @@ nav a:hover {
     height: auto;
 }
 
-/*
-   Text positioned over the hero image.
-   This satisfies the assignment requirement
-   for absolute positioning.
-*/
-
 .hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 
     width: 80%;
     max-width: 700px;
 
     text-align: center;
-
     color: white;
 
     background-color: rgba(0, 0, 0, 0.55);
 
     padding: 1.5rem;
-
     border-radius: 8px;
 }
 
@@ -153,7 +121,7 @@ nav a:hover {
 }
 
 /* =========================================================
-   HOME PAGE - CALL TO ACTION
+   CALL TO ACTION
    ========================================================= */
 
 .cta {
@@ -181,11 +149,12 @@ nav a:hover {
 }
 
 /* =========================================================
-   HOME PAGE - NEWSLETTER
+   NEWSLETTER
    ========================================================= */
 
 .newsletter {
     max-width: 700px;
+
     margin: 2rem auto;
     padding: 2rem;
 
@@ -207,48 +176,56 @@ nav a:hover {
 }
 
 /* =========================================================
-   HOME PAGE - CSS GRID
+   HOME PAGE INFORMATION GRID
    ========================================================= */
-
-/*
-   This grid provides the required multi-column
-   layout and prevents the page from becoming
-   a simple single-column flow.
-*/
 
 .home-grid {
     max-width: 1100px;
 
     margin: 2rem auto;
-
     padding: 1rem;
 
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     gap: 2rem;
+}
+
+/*
+   The section heading identifies the entire section.
+*/
+
+.home-grid > h2 {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+
+    margin-bottom: 0.5rem;
+}
+
+/*
+   Individual article headings are h3 because
+   they are subsections of the home-grid h2.
+*/
+
+.home-grid h3 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .home-grid article {
     padding: 1rem;
 }
 
-.home-grid h2 {
-    font-family: var(--heading-font);
-    color: var(--accent1-color);
-    margin-bottom: 0.75rem;
-}
-
 .home-grid p {
     margin-bottom: 1rem;
 }
-
-/*
-   Image width is responsive while height remains
-   automatic so the original image aspect ratio
-   is preserved.
-*/
 
 .home-grid img {
     display: block;
@@ -260,23 +237,21 @@ nav a:hover {
 }
 
 /* =========================================================
-   CONTACT PAGE - TWO COLUMN GRID
+   CONTACT GRID
    ========================================================= */
 
 .contact-grid {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
-
     gap: 2rem;
 
     max-width: 1000px;
-
     margin: 2rem auto;
 }
 
 /* =========================================================
-   CONTACT FORM
+   FORMS
    ========================================================= */
 
 form {
@@ -295,7 +270,6 @@ form button {
     padding: 0.5rem;
 
     border: 1px solid #ccc;
-
     border-radius: 5px;
 
     font-family: var(--body-font);
@@ -307,11 +281,9 @@ form textarea {
 
 form button {
     background-color: var(--primary-color);
-
     color: white;
 
     font-weight: bold;
-
     cursor: pointer;
 
     border: none;
@@ -323,12 +295,11 @@ form button:hover {
 }
 
 /* =========================================================
-   EMPLOYEE PROFILES
+   EMPLOYEE SECTION
    ========================================================= */
 
 .employees {
     max-width: 1000px;
-
     margin: 2rem auto;
 }
 
@@ -372,7 +343,7 @@ form button:hover {
 }
 
 /* =========================================================
-   GOOGLE MAP
+   IFRAME
    ========================================================= */
 
 iframe {
@@ -381,7 +352,6 @@ iframe {
     border: none;
 
     width: 100%;
-
     height: 300px;
 }
 
@@ -401,10 +371,6 @@ footer {
     position: relative;
 }
 
-/* =========================================================
-   SOCIAL MEDIA
-   ========================================================= */
-
 footer nav.socialmedia {
     margin-top: 10px;
 
@@ -417,7 +383,7 @@ footer nav.socialmedia {
 
 footer nav.socialmedia a img {
     width: 30px;
-    height: auto;
+    height: 30px;
 }
 
 /* =========================================================
@@ -437,103 +403,34 @@ footer nav.socialmedia a img {
 }
 
 /* =========================================================
-   RESPONSIVE DESIGN
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    /* Header */
-
-    header {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    /* Navigation */
-
-    nav {
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        margin-top: 1rem;
-    }
-
-    /* Hero */
-
-    .hero-content {
-        width: 90%;
-
-        padding: 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 0.95rem;
-    }
-
-    /* Home grid */
-
-    .home-grid {
-        grid-template-columns: 1fr;
-
-        gap: 1rem;
-    }
-
-    /* Contact grid */
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-
-        padding: 1rem;
-    }
-
-    /* Employees */
-
-    .employee-row {
-        flex-wrap: wrap;
-    }
-
-    /* Newsletter */
-
-    .newsletter {
-        margin: 2rem 1rem;
-    }
-
-    /* CTA */
-
-    .cta {
-        padding: 0 1rem;
-    }
-}
-
-/* =========================================================
-   TRIPS PAGE
+   TRIPS INTRODUCTION
    ========================================================= */
 
 .trips-intro {
     max-width: 1000px;
+
     margin: 2rem auto;
+
     padding: 0 1rem;
+
     text-align: center;
 }
 
 .trips-intro p {
     max-width: 800px;
+
     margin: 0 auto;
 }
 
 /* =========================================================
-   TRIPS CALL TO ACTION
+   TRIP CALL TO ACTION
    ========================================================= */
 
 .trip-cta {
     max-width: 900px;
+
     margin: 2rem auto;
+
     padding: 2rem;
 
     text-align: center;
@@ -545,6 +442,7 @@ footer nav.socialmedia a img {
 
 .trip-cta h2 {
     font-family: var(--heading-font);
+
     margin-bottom: 0.75rem;
 }
 
@@ -556,11 +454,13 @@ footer nav.socialmedia a img {
     display: inline-block;
 
     background-color: var(--primary-color);
+
     color: white;
 
     padding: 0.75rem 1.5rem;
 
     text-decoration: none;
+
     font-weight: bold;
 
     border-radius: 5px;
@@ -568,11 +468,12 @@ footer nav.socialmedia a img {
 
 .trip-cta a:hover {
     background-color: var(--secondary-color);
+
     color: var(--accent1-color);
 }
 
 /* =========================================================
-   TRIP CARDS GRID
+   TRIPS GRID
    ========================================================= */
 
 .trips-grid {
@@ -588,10 +489,6 @@ footer nav.socialmedia a img {
 
     gap: 2rem;
 }
-
-/* =========================================================
-   INDIVIDUAL TRIP CARD
-   ========================================================= */
 
 .trip-card {
     background-color: #f5f5f5;
@@ -656,11 +553,6 @@ footer nav.socialmedia a img {
     margin: 0 auto 1.5rem;
 }
 
-/*
-   Allows the table to scroll horizontally on
-   smaller screens without breaking the page.
-*/
-
 .table-container {
     width: 100%;
 
@@ -701,10 +593,66 @@ tr:hover {
 }
 
 /* =========================================================
-   TRIPS PAGE RESPONSIVE DESIGN
+   RESPONSIVE DESIGN
    ========================================================= */
 
 @media (max-width: 700px) {
+
+    header {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        margin-top: 1rem;
+    }
+
+    .hero-content {
+        width: 90%;
+
+        padding: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+    .home-grid > h2 {
+        grid-column: 1;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        padding: 1rem;
+    }
+
+    .employee-row {
+        flex-wrap: wrap;
+    }
+
+    .newsletter {
+        margin: 2rem 1rem;
+    }
+
+    .cta {
+        padding: 0 1rem;
+    }
 
     .trips-grid {
         grid-template-columns: 1fr;
@@ -721,6 +669,7 @@ tr:hover {
     th,
     td {
         padding: 0.6rem;
+
         font-size: 0.9rem;
     }
 }
